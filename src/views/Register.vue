@@ -24,7 +24,7 @@ export default {
       const router = useRouter();
 
       const submit = async () => {
-        await fetch('http://localhost:8000/api/register', {
+        await fetch(process.env.VUE_APP_BASE_URL + '/register', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify(data)
